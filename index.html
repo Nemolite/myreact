@@ -10,6 +10,7 @@
 		<div id="myapp"></div>
 		<div id="myapp2"></div>
 		<div id="myapp3"></div>
+		<div id="myapp4"></div>
 		<script
 			src="https://unpkg.com/react@18/umd/react.development.js"
 			crossorigin
@@ -26,6 +27,14 @@
 				React.createElement('h1', null, 'Тест'),
 				document.querySelector('#myapp3')
 			)
+
+			class MyComponent extends React.Component {
+				render() {
+					return <p>Привет</p>
+				}
+			}
+
+			ReactDOM.render(<MyComponent />, document.querySelector('#myapp4'))
 		</script>
 	</body>
 </html>
