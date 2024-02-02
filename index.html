@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="st.css" />
 		<title>MyReact</title>
 	</head>
 	<body>
 		<div id="myapp"></div>
 		<div id="myapp2"></div>
+		<div id="myapp3"></div>
 		<script
 			src="https://unpkg.com/react@18/umd/react.development.js"
 			crossorigin
@@ -20,6 +22,10 @@
 		<script src="main.js"></script>
 		<script type="text/babel">
 			ReactDOM.render(<h1>Шерлок Холмс</h1>, document.querySelector('#myapp2'))
+			ReactDOM.render(
+				React.createElement('h1', null, 'Тест'),
+				document.querySelector('#myapp3')
+			)
 		</script>
 	</body>
 </html>
