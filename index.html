@@ -13,6 +13,7 @@
 		<div id="myapp4"></div>
 		<div id="myapp5"></div>
 		<div id="myapp7"></div>
+		<div id="myapp8"></div>
 		<script
 			src="https://unpkg.com/react@18/umd/react.development.js"
 			crossorigin
@@ -48,19 +49,36 @@
 			class InnerComponent extends React.Component {
 				render() {
 					return (
-							<div>
-								<button type={this.props.beahavior}>{this.props.children}</button>
-							</div>
-							)
+						<div>
+							<button type={this.props.beahavior}>{this.props.children}</button>
+						</div>
+					)
 				}
 			}
 
 			ReactDOM.render(
 				<div>
-
 					<InnerComponent beahavior='button'>Отправить данные</InnerComponent>
 				</div>,
 				document.querySelector('#myapp7')
+			)
+
+			class MyTxt extends React.Component {
+				render() {
+					return <div className='letter'>{this.props.children}</div>
+				}
+			}
+			var mytxt = document.querySelector('#myapp8')
+			ReactDOM.render(
+				<div>
+					<MyTxt>П</MyTxt>
+					<MyTxt>Р</MyTxt>
+					<MyTxt>И</MyTxt>
+					<MyTxt>В</MyTxt>
+					<MyTxt>Е</MyTxt>
+					<MyTxt>Т</MyTxt>
+				</div>,
+				mytxt
 			)
 		</script>
 	</body>
